@@ -1,1 +1,12 @@
 @import '../globals.scss';
+
+body {
+    padding: 20*$px;
+    display: flex;
+    gap: 10*$px;
+    .elements {
+        display: flex;
+        flex-direction: column;
+        gap: 4*$px;
+    }
+}
