@@ -3,7 +3,7 @@ import { IconCheck } from './icons';
 
 export function Text(props) {
     let style = props.style;
-    let children = props.children
+    let children = props.children;
 
     switch (style) {
         case 'h1':
@@ -27,4 +27,14 @@ export function Text(props) {
                 <span className='sm'>{children}</span>
             )
     }
+}
+
+export function Button(props) {
+    let style = props.style;
+    let color = props.color;
+    let children = props.children;
+
+    return (
+        <button className={style + '-' + color}>{children}</button>
+    )
 }

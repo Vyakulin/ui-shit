@@ -2,17 +2,24 @@
 import './style.css';
 
 import {
-   Text, 
+   Text, Button
 } from '../components';
 
 export default function Test() {
   return (
-    <div className='elements'>
-      <Text style='h1'>Header1</Text>
-      <Text style='h2'>Header2</Text>
-      <Text style='h3'>Header3</Text>
-      <Text style='p'>Paragraph</Text>
-      <Text style='sm'>Small</Text>
+    <div className='all'>
+      <div className='elements'>
+        <Text style='h1'>Header1</Text>
+        <Text style='h2'>Header2</Text>
+        <Text style='h3'>Header3</Text>
+        <Text style='p'>Paragraph</Text>
+        <Text style='sm'>Small</Text>
+      </div>
+      <div className='elements'>
+        <Button 
+          style='fill' 
+          color='white'>Button</Button>
+      </div>
     </div>
   );
 }
