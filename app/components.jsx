@@ -35,6 +35,6 @@ export function Button(props) {
     let children = props.children;
 
     return (
-        <button className={style + '-' + color}>{children}</button>
+        <button className={'bt-' + style + '-' + color}>{children}</button>
     )
 }

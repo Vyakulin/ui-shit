@@ -13,6 +13,7 @@ $accent-2: var(--pink-300);
 * {
   all: unset;
   transition: all 300ms ease-out;
+  outline-offset: -1.5px;
 }
 script, head {
   display: none;
@@ -56,4 +57,20 @@ body {
   font-size: 3*$px;
   font-weight: 400;
   font-style: text;
+}
+
+// Buttons
+.bt {
+  display: inline-flex;
+  cursor: pointer;
+  padding: 4*$px 2*$px;
+}
+.bt-fill-white {
+  @extend .bt;
+  background-color: $white;
+  color: $black;
+  &:hover {
+    background-color: $white-2;
+    color: $black-2;
+  }
 }
