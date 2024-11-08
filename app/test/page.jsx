@@ -1,6 +1,6 @@
 'use client'
 import './style.css';
-import { IconCheck } from './icons.jsx';
+import { IconCheck } from '../icons';
 
 import {
    Text, Button
