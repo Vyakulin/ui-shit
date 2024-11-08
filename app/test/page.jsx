@@ -1,10 +1,9 @@
 'use client'
 import './style.css';
-import { IconCheck } from '../icons';
-
 import {
    Text, Button
 } from '../components';
+import { IconCheck } from '../icons';
 
 export default function Test() {
   return (
