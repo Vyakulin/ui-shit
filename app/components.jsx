@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { IconCheck } from '../icons.jsx';
+import { IconCheck } from './icons';
 
 export function Text(props) {
     let style = props.style;
