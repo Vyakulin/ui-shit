@@ -1,4 +1,4 @@
-import "./globals.scss";
+import "./globals.css";
 import localFont from 'next/font/local';
 
 const sfPro = localFont({
