@@ -64,6 +64,7 @@ body {
   display: inline-flex;
   cursor: pointer;
   padding: 2*$px 4*$px;
+  border-radius: 4*$px;
 }
 .bt-fill-white {
   @extend .bt;
