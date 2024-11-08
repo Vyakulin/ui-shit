@@ -1,0 +1,46 @@
+@use './colors.scss';
+// Variables
+$px: 0.25rem;
+// Colors
+$white: var(--neutral-50);
+$white-2: var(--neutral-400);
+$black: var(--neutral-950);
+$black-2: var(--neutral-600);
+$accent: var(--pink-500);
+$accent-2: var(--pink-300);
+
+// Reset
+* {
+  all: unset;
+  transition: all 300ms ease-out;
+}
+script, head {
+  display: none;
+}
+body {
+  display: block;
+  background-color: $black;
+  color: $white;
+}
+// Text
+.text {
+  line-height: 1;
+}
+.h1 {
+  @extend .text;
+  font-size: 10*$px;
+  font-weight: 700;
+  font-style: display;
+}
+.h2 {
+  @extend .text;
+  font-size: 8*$px;
+  font-weight: 600;
+  font-style: display;
+}
+.h3 {
+  @extend .text;
+  font-size: 6*$px;
+  font-weight: 500;
+  font-style: display;
+}
