@@ -44,3 +44,15 @@ body {
   font-weight: 500;
   font-style: display;
 }
+.p {
+  @extend .text;
+  font-size: 4*$px;
+  font-weight: 400;
+  font-style: text;
+}
+.sm {
+  @extend .text;
+  font-size: 3*$px;
+  font-weight: 400;
+  font-style: text;
+}
