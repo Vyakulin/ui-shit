@@ -63,7 +63,7 @@ body {
 .bt {
   display: inline-flex;
   cursor: pointer;
-  padding: 4*$px 2*$px;
+  padding: 2*$px 4*$px;
 }
 .bt-fill-white {
   @extend .bt;
