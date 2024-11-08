@@ -68,6 +68,7 @@ svg, path {
   cursor: pointer;
   padding: 2*$px 4*$px;
   border-radius: 3*$px;
+  align-items: center;
 }
 .bt-fill-white {
   @extend .bt;
