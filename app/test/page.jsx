@@ -1,5 +1,6 @@
 'use client'
 import './style.css';
+import { IconCheck } from './icons';
 
 import {
    Text, Button
@@ -18,7 +19,7 @@ export default function Test() {
       <div className='elements'>
         <Button 
           style='fill' 
-          color='white'>Button</Button>
+          color='white'>Button<IconCheck /></Button>
       </div>
     </div>
   );
