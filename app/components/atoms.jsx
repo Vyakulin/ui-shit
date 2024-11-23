@@ -149,9 +149,9 @@ export function Slct(p) {
       [`slct-open`]: isOpen,
     })}`} 
     id={p.id} ref={ref}>
-      <div className="slct-name" onClick={changeOpen}>
-        <span className={txt}>{name}</span>
-        <HiChevronDown className={txt} />
+      <div className={`slct-name ${txt}`} onClick={changeOpen}>
+        <span>{name}</span>
+        <HiChevronDown />
       </div>
       <ul>
         {p.children.split(';').map((item) => <li onClick={changeName} className="p" id={item} key={item}>
