@@ -14,7 +14,12 @@ export function Txt(p) {
 
 export function Lnk(p) {
 return (
-    <Link className={`${p.txt} ${p.className} lnk-${p.clr}`} id={p.id} href={p.href} target={p.target}>
+    <Link className={`${p.txt} ${p.className}
+    ${clsx({
+      [`lnk-disabled`]: p.disabled,
+      [`lnk-${p.clr}`]: !p.disabled,
+    })}`} 
+    id={p.id} href={p.href} target={p.target}>
       {p.children}
     </Link>
   )
@@ -127,7 +132,7 @@ export function Slct(p) {
 
   let [isOpen, setIsOpen] = useState(false);
   function changeOpen() {
-    isOpen ? setIsOpen(false) : setIsOpen(true);
+    setIsOpen(!isOpen);
   }
 
   let [name, setName] = useState(p.name);
@@ -158,6 +163,34 @@ export function Slct(p) {
           {item}
         </li>)}
       </ul>
+    </div>
+  )
+}
+
+export function Accrdn(p) {
+  let txt = p.txt;
+  if(!txt) {
+    txt = 'h3';
+  }
+
+  let [isOpen, setIsOpen] = useState(false);
+  function changeOpen() {
+    setIsOpen(!isOpen);
+  }
+
+  return (
+    <div className={`${p.className}
+    ${clsx({
+      [`accr-${p.stl}-disabled`]: p.disabled,
+      [`accr-${p.stl}`]: !p.disabled,
+      [`accr-open`]: isOpen,
+    })}`} 
+    id={p.id}>
+      <div className={`accr-name ${txt}`} onClick={changeOpen}>
+        <span>{p.name}</span>
+        <HiChevronDown />
+      </div>
+        <p className="p">{p.children}</p>
     </div>
   )
 }

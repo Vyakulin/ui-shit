@@ -1,5 +1,5 @@
 'use client';
-import { Txt, Btn, Inpt, Cb, Rd, Swtch, Lnk, Slct } from './components/atoms';
+import { Txt, Btn, Inpt, Cb, Rd, Swtch, Lnk, Slct, Accrdn } from './components/atoms';
 import './style.css';
 import { HiCheck } from "react-icons/hi2";
 
@@ -74,13 +74,19 @@ export default function Home() {
         <Lnk href='#' txt='h3' clr='white'>
           Link<HiCheck />
         </Lnk>
-        <Lnk href='#' txt='h3' clr='grey'>
+        <Lnk href='#' txt='h3' clr='black'>
+          Link<HiCheck />
+        </Lnk>
+        <Lnk href='#' txt='h3' clr='grey'> 
+          Link<HiCheck />
+        </Lnk>
+        <Lnk href='#' txt='h3' clr='grey2'>
           Link<HiCheck />
         </Lnk>
         <Lnk href='#' txt='h3' clr='accent'>
           Link<HiCheck />
         </Lnk>
-        <Lnk href='#' txt='h3' clr='grey2'>
+        <Lnk href='#' txt='h3' disabled>
           Link<HiCheck />
         </Lnk>
       </div>
@@ -89,9 +95,30 @@ export default function Home() {
         <Slct stl='fill' name='Select' id='slct1'>
           Item1;Item2;Item3
         </Slct>
-        <Slct stl='stroke' name='Select' id='slct2'>
+        <Slct stl='fill' name='Select' id='slct2' disabled>
           Item1;Item2;Item3
         </Slct>
+        <Slct stl='stroke' name='Select' id='slct3'>
+          Item1;Item2;Item3
+        </Slct>
+        <Slct stl='stroke' name='Select' id='slct4' disabled>
+          Item1;Item2;Item3
+        </Slct>
+      </div>
+      <div className="el-1">
+        <Txt txt='h1'>Accordion</Txt>
+        <Accrdn stl='fill' name='Accordion' id='accr1'>
+          Some text for the accordion to test it
+        </Accrdn>
+        <Accrdn stl='fill' name='Accordion' id='accr2' disabled>
+          Some text for the accordion to test it
+        </Accrdn>
+        <Accrdn stl='stroke' name='Accordion' id='accr3'>
+          Some text for the accordion to test it
+        </Accrdn>
+        <Accrdn stl='stroke' name='Accordion' id='accr4' disabled>
+          Some text for the accordion to test it
+        </Accrdn>
       </div>
     </div>
   );

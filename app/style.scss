@@ -13,11 +13,12 @@
   flex-direction: column;
   gap: 4rem;
 }
-.inpt-fill, .inpt-stroke, .inpt-fill-disabled, .inpt-stroke-disabled {
+.inpt-fill, .inpt-stroke, .inpt-fill-disabled, .inpt-stroke-disabled, 
+.slct-fill, .slct-stroke, .slct-fill-disabled, .slct-stroke-disabled {
   width: 150px;
 }
-.slct-fill, .slct-stroke, .slct-fill-disabled, .slct-stroke-disabled {
-  width: 200px;
+.accr-fill, .accr-stroke, .accr-fill-disabled, .accr-stroke-disabled {
+  width: 50rem;
 }
 .all {
   flex-flow: row wrap;
