@@ -1,5 +1,6 @@
 'use client';
-import { Txt, Btn, Inpt, Cb, Rd, Swtch, Lnk, Slct, Accrdn } from './components/atoms';
+import { createElement } from 'react';
+import { Txt, Btn, Inpt, Cb, Rd, Swtch, Lnk, Slct, Accrdn, Alrt} from './components/atoms';
 import './style.css';
 import { HiCheck } from "react-icons/hi2";
 
@@ -119,6 +120,15 @@ export default function Home() {
         <Accrdn stl='stroke' name='Accordion' id='accr4' disabled>
           Some text for the accordion to test it
         </Accrdn>
+      </div>
+      <div className="el-1">
+        <Txt txt='h1'>Alert</Txt>
+        <Alrt stl='fill' btnstl='fill' name='Click to alert' icon={<HiCheck />}>
+          Test message for the alert
+        </Alrt>
+        <Alrt stl='stroke' btnstl='stroke' name='Click to alert' icon={<HiCheck />}>
+          Test message for the alert
+        </Alrt>
       </div>
     </div>
   );
