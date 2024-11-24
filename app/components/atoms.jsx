@@ -1,6 +1,6 @@
-import { useState, useRef, createElement } from "react";
+import { useState, useRef } from "react";
 import clsx from "clsx";
-import { HiCheck, HiChevronDown, HiXMark } from "react-icons/hi2";
+import { HiCheck, HiChevronDown} from "react-icons/hi2";
 import Link from "next/link";
 import { useOnClickOutside } from 'usehooks-ts';
 
@@ -191,43 +191,6 @@ export function Accrdn(p) {
         <HiChevronDown />
       </div>
         <p className="p">{p.children}</p>
-    </div>
-  )
-}
-
-export function Alrt(p) {
-  let txt = p.txt;
-  let btntxt = p.btnTxt;
-  if(!txt) {
-    txt = 'h3';
-  };
-  if(!btntxt) {
-    btntxt = 'h3';
-  };
-
-  let clr;
-  if (p.stl == 'fill') {
-    clr = 'grey2';
-  } else if (p.stl == 'stroke') {
-    clr = 'grey';
-  };
-
-  let [isOpen, setIsOpen] = useState(true);
-  function changeOpen() {
-    setIsOpen(!isOpen);
-  };
-
-  return (
-    <div className="alrt-c">
-      <Btn stl={p.btnstl} txt={btntxt} onClick={changeOpen}>
-        Click to alert
-      </Btn>
-      {isOpen ? 
-      <div className={`${txt} ${p.className} alrt-${p.stl}`} id={p.id}>
-        {p.icon}
-        <p>{p.children}</p>
-        <HiXMark className={`alrt-x h2 lnk-${clr}`} onClick={changeOpen}/>
-      </div> : null}
     </div>
   )
 }
