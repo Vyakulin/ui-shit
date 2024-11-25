@@ -1,4 +1,4 @@
-import { Inpt, Slct, Accrdn, Txt, Btn, Cb, Rd, Swtch, Lnk } from './components/atoms';
+import { Inpt, Slct, Accrdn, Txt, Btn, Cb, Rd, Swtch, Lnk, Crd } from './components/atoms';
 import './style.css';
 import { HiCheck } from "react-icons/hi2";
 
@@ -14,16 +14,16 @@ export default function Home() {
       </div>
       <div className="el-1">
         <Txt txt='h1'>Buttons</Txt>
-        <Btn stl='fill'>
+        <Btn stl='bg'>
           Button<HiCheck />
         </Btn>
-        <Btn stl='fill' disabled>
+        <Btn stl='bg' disabled>
           Button<HiCheck />
         </Btn>
-        <Btn stl='stroke'>
+        <Btn stl='ol'>
           Button<HiCheck />
         </Btn>
-        <Btn stl='stroke' disabled>
+        <Btn stl='ol' disabled>
           Button<HiCheck />
         </Btn>
       </div>
@@ -32,39 +32,39 @@ export default function Home() {
         <div className='el-2'>
           <div className="el-3">
             <Txt txt='h2'>Text</Txt>
-            <Inpt icon={<HiCheck />} stl='fill'>
+            <Inpt icon={<HiCheck />} stl='bg'>
               Input
             </Inpt>
-            <Inpt icon={<HiCheck />} stl='fill' disabled>
+            <Inpt icon={<HiCheck />} stl='bg' disabled>
               Input
             </Inpt>
-            <Inpt icon={<HiCheck />} stl='stroke'>
+            <Inpt icon={<HiCheck />} stl='ol'>
               Input
             </Inpt>
-            <Inpt icon={<HiCheck />} stl='stroke' disabled>
+            <Inpt icon={<HiCheck />} stl='ol' disabled>
               Input
             </Inpt>
           </div>
           <div className="el-3">
             <Txt txt='h2'>Checkbox</Txt>
-            <Cb stl='fill' id='cb1'/>
-            <Cb stl='fill' id='cb2' disabled/>
-            <Cb stl='stroke' id='cb3'/>
-            <Cb stl='stroke' id='cb4' disabled/>
+            <Cb stl='bg' id='cb1'/>
+            <Cb stl='bg' id='cb2' disabled/>
+            <Cb stl='ol' id='cb3'/>
+            <Cb stl='ol' id='cb4' disabled/>
           </div>
           <div className="el-3">
             <Txt txt='h2'>Radio</Txt>
-            <Rd stl='fill' id='rd1' name='test'/>
-            <Rd stl='fill' id='rd2' disabled/>
-            <Rd stl='stroke' id='rd3' name='test'/>
-            <Rd stl='stroke' id='rd4' disabled/>
+            <Rd stl='bg' id='rd1' name='test'/>
+            <Rd stl='bg' id='rd2' disabled/>
+            <Rd stl='ol' id='rd3' name='test'/>
+            <Rd stl='ol' id='rd4' disabled/>
           </div>
           <div className="el-3">
             <Txt txt='h2'>Switch</Txt>
-            <Swtch stl='fill' id='swtch1' name='test2'/>
-            <Swtch stl='fill' id='swtch2' disabled/>
-            <Swtch stl='stroke' id='swtch3' name='test2'/>
-            <Swtch stl='stroke' id='swtch4' disabled/>
+            <Swtch stl='bg' id='swtch1' name='test2'/>
+            <Swtch stl='bg' id='swtch2' disabled/>
+            <Swtch stl='ol' id='swtch3' name='test2'/>
+            <Swtch stl='ol' id='swtch4' disabled/>
           </div>
         </div>
       </div>
@@ -91,33 +91,44 @@ export default function Home() {
       </div>
       <div className="el-1">
         <Txt txt='h1'>Select</Txt>
-        <Slct stl='fill' name='Select' id='slct1'>
+        <Slct stl='bg' name='Select' id='slct1'>
           Item1;Item2;Item3
         </Slct>
-        <Slct stl='fill' name='Select' id='slct2' disabled>
+        <Slct stl='bg' name='Select' id='slct2' disabled>
           Item1;Item2;Item3
         </Slct>
-        <Slct stl='stroke' name='Select' id='slct3'>
+        <Slct stl='ol' name='Select' id='slct3'>
           Item1;Item2;Item3
         </Slct>
-        <Slct stl='stroke' name='Select' id='slct4' disabled>
+        <Slct stl='ol' name='Select' id='slct4' disabled>
           Item1;Item2;Item3
         </Slct>
       </div>
       <div className="el-1">
         <Txt txt='h1'>Accordion</Txt>
-        <Accrdn stl='fill' name='Accordion' id='accr1'>
+        <Accrdn stl='bg' name='Accordion' id='accr1'>
           Some text for the accordion to test it
         </Accrdn>
-        <Accrdn stl='fill' name='Accordion' id='accr2' disabled>
+        <Accrdn stl='bg' name='Accordion' id='accr2' disabled>
           Some text for the accordion to test it
         </Accrdn>
-        <Accrdn stl='stroke' name='Accordion' id='accr3'>
+        <Accrdn stl='ol' name='Accordion' id='accr3'>
           Some text for the accordion to test it
         </Accrdn>
-        <Accrdn stl='stroke' name='Accordion' id='accr4' disabled>
+        <Accrdn stl='ol' name='Accordion' id='accr4' disabled>
           Some text for the accordion to test it
         </Accrdn>
+      </div>
+      <div className="el-1">
+        <Txt txt='h1'>Card</Txt>
+        <Crd stl='bg'>
+          <Txt txt='h2'>Card header</Txt>
+          <Txt txt='p'>Card text</Txt>
+        </Crd>
+        <Crd stl='ol'>
+          <Txt txt='h2'>Card header</Txt>
+          <Txt txt='p'>Card text</Txt>
+        </Crd>
       </div>
     </div>
   );

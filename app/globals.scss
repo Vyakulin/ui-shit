@@ -333,7 +333,7 @@ body {
 }
 
 // Buttons
-.btn-fill {
+.btn-bg {
   @extend .bg;
   background-color: $white;
   color: $black;
@@ -342,20 +342,20 @@ body {
     color: $black-2;
   }
 }
-.btn-fill-disabled {
+.btn-bg-disabled {
   @extend .bg;
   background-color: $black-2;
   color: $black;
   cursor: default;
 }
-.btn-stroke {
+.btn-ol {
   @extend .ol;
   color: $white;
   &:hover {
     color: $white-2;
   }
 }
-.btn-stroke-disabled {
+.btn-ol-disabled {
   @extend .ol;
   color: $black-2;
   cursor: default;
@@ -391,7 +391,7 @@ body {
     margin-left: -4rem;
   }
 }
-.inpt-fill {
+.inpt-bg {
   @extend .inpt, .bg;
   background-color: $white;
   color: $black;
@@ -424,7 +424,7 @@ body {
     }
   }
 }
-.inpt-stroke {
+.inpt-ol {
   @extend .inpt, .ol;
   color: $white;
   &:hover {
@@ -453,7 +453,7 @@ body {
     }
   }
 }
-.inpt-fill-disabled {
+.inpt-bg-disabled {
   @extend .inpt, .bg;
   background-color: $black-2;
   color: $black;
@@ -462,7 +462,7 @@ body {
     display: none;
   }
 }
-.inpt-stroke-disabled {
+.inpt-ol-disabled {
   @extend .inpt, .ol;
   color: $black-2;
   cursor: default;
@@ -489,7 +489,7 @@ body {
     }
   }
 }
-.cb-fill {
+.cb-bg {
   @extend .cb;
   background-color: $white;
   &:hover {
@@ -505,7 +505,7 @@ body {
     }
   }
 }
-.cb-stroke {
+.cb-ol {
   @extend .cb;
   outline-offset: -$olw;
   outline: $olw solid currentColor;
@@ -520,7 +520,7 @@ body {
     }
   }
 }
-.cb-stroke-disabled {
+.cb-ol-disabled {
   @extend .cb;
   outline-offset: -$olw;
   outline: $olw solid currentColor;
@@ -532,7 +532,7 @@ body {
     }
   }
 }
-.cb-fill-disabled {
+.cb-bg-disabled {
   @extend .cb;
   background-color: $black-2;
   cursor: default;
@@ -550,7 +550,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
-.rd-fill {
+.rd-bg {
   @extend .rd;
   background-color: $white;
   &:hover {
@@ -563,7 +563,7 @@ body {
     }
   }
 }
-.rd-stroke {
+.rd-ol {
   @extend .rd;
   outline-offset: -$olw;
   outline: $olw solid currentColor;
@@ -580,12 +580,12 @@ body {
     }
   }
 }
-.rd-fill-disabled {
+.rd-bg-disabled {
   @extend .rd;
   background-color: $black-2;
   cursor: default;
 }
-.rd-stroke-disabled {
+.rd-ol-disabled {
   @extend .rd;
   outline-offset: -$olw;
   outline: $olw solid currentColor;
@@ -614,7 +614,7 @@ body {
     }
   }
 }
-.swtch-fill {
+.swtch-bg {
   @extend .swtch;
   background-color: $white;
   color: $black;
@@ -631,7 +631,7 @@ body {
     }
   }
 }
-.swtch-stroke {
+.swtch-ol {
   @extend .swtch;
   outline-offset: -$olw;
   outline: $olw solid currentColor;
@@ -646,7 +646,7 @@ body {
     }
   }
 }
-.swtch-fill-disabled {
+.swtch-bg-disabled {
   @extend .swtch;
   cursor: default;
   background-color: $black-2;
@@ -657,7 +657,7 @@ body {
     }
   }
 }
-.swtch-stroke-disabled {
+.swtch-ol-disabled {
   @extend .swtch;
   outline-offset: -$olw;
   outline: $olw solid currentColor;
@@ -762,7 +762,7 @@ body {
     }
   }
 }
-.slct-fill {
+.slct-bg {
   @extend .slct;
   .slct-name {
     background-color: $white;
@@ -788,7 +788,7 @@ body {
     }
   }
 }
-.slct-stroke {
+.slct-ol {
   @extend .slct;
   .slct-name {
     @extend .ol;
@@ -809,7 +809,7 @@ body {
     }
   }
 }
-.slct-fill-disabled {
+.slct-bg-disabled {
   @extend .slct;
   .slct-name {
     background-color: $black-2;
@@ -824,7 +824,7 @@ body {
     display: none;
   }
 }
-.slct-stroke-disabled {
+.slct-ol-disabled {
   @extend .slct;
   .slct-name {
     @extend .ol;
@@ -876,7 +876,7 @@ body {
     padding: 1.5rem 4rem;
   }
 }
-.accr-fill {
+.accr-bg {
   @extend .accr;
   .accr-name {
     background-color: $white;
@@ -896,7 +896,7 @@ body {
     }
   }
 }
-.accr-stroke {
+.accr-ol {
   @extend .accr;
   .accr-name {
     @extend .ol;
@@ -911,7 +911,7 @@ body {
     margin-top: -0.5rem;
   }
 }
-.accr-fill-disabled {
+.accr-bg-disabled {
   @extend .accr;
   .accr-name {
     background-color: $black-2;
@@ -926,7 +926,7 @@ body {
     display: none !important;
   }
 }
-.accr-stroke-disabled {
+.accr-ol-disabled {
   @extend .accr;
   .accr-name {
     @extend .ol;
@@ -940,4 +940,19 @@ body {
   p {
     display: none !important;
   }
+}
+
+// Card
+.crd {
+  padding: 3rem 6rem;
+  cursor: default;
+  flex-direction: column;
+}
+.crd-bg {
+  @extend .bg, .crd;
+  background-color: $white;
+  color: $black;
+}
+.crd-ol {
+  @extend .ol, .crd;
 }

@@ -8,20 +8,12 @@ import { useOnClickOutside } from 'usehooks-ts';
 export function Inpt(p) {
   let txt = p.txt;
   let tp = p.tp;
-  if(!txt) {
-    txt = 'h3';
-  }
-  if(!tp) {
-    tp = 'text';
-  }
+  txt ? null : txt = 'h3';
+  tp ? null : tp = 'text';
 
   let [isValid, setIsValid] = useState(false);
   const change = event => {
-    if (event.target.value != '') {
-      setIsValid(true);
-    } else {
-      setIsValid(false);
-    }
+    event.target.value == '' ? setIsValid(false) : setIsValid(true);
   }
 
   return (
@@ -29,20 +21,18 @@ export function Inpt(p) {
       ['inpt-valid']: isValid,
       [`inpt-${p.stl}-disabled`]: p.disabled,
       [`inpt-${p.stl}`]: !p.disabled,
-    })}`} 
-    id={p.id}>
+    })}`}
+      id={p.id}>
       <span>{p.children}</span>
       {p.icon}
-      <input name={p.name} type={tp} onChange={change}/>
+      <input className={txt} name={p.name} type={tp} onChange={change} />
     </div>
   )
 }
 
 export function Slct(p) {
   let txt = p.txt;
-  if(!txt) {
-    txt = 'h3';
-  }
+  txt ? null : txt = 'h3';
 
   let [isOpen, setIsOpen] = useState(false);
   function changeOpen() {
@@ -66,8 +56,8 @@ export function Slct(p) {
       [`slct-${p.stl}-disabled`]: p.disabled,
       [`slct-${p.stl}`]: !p.disabled,
       [`slct-open`]: isOpen,
-    })}`} 
-    id={p.id} ref={ref}>
+    })}`}
+      id={p.id} ref={ref}>
       <div className={`slct-name ${txt}`} onClick={changeOpen}>
         <span>{name}</span>
         <HiChevronDown />
@@ -83,9 +73,7 @@ export function Slct(p) {
 
 export function Accrdn(p) {
   let txt = p.txt;
-  if(!txt) {
-    txt = 'h3';
-  }
+  txt ? null : txt = 'h3';
 
   let [isOpen, setIsOpen] = useState(false);
   function changeOpen() {
@@ -98,13 +86,13 @@ export function Accrdn(p) {
       [`accr-${p.stl}-disabled`]: p.disabled,
       [`accr-${p.stl}`]: !p.disabled,
       [`accr-open`]: isOpen,
-    })}`} 
-    id={p.id}>
+    })}`}
+      id={p.id}>
       <div className={`accr-name ${txt}`} onClick={changeOpen}>
         <span>{p.name}</span>
         <HiChevronDown />
       </div>
-        <p className="p">{p.children}</p>
+      <p className="p">{p.children}</p>
     </div>
   )
 }
@@ -118,13 +106,13 @@ export function Txt(p) {
 }
 
 export function Lnk(p) {
-return (
+  return (
     <Link className={`${p.txt} ${p.className}
     ${clsx({
       [`lnk-disabled`]: p.disabled,
       [`lnk-${p.clr}`]: !p.disabled,
-    })}`} 
-    id={p.id} href={p.href} target={p.target} onClick={p.onClick}>
+    })}`}
+      id={p.id} href={p.href} target={p.target} onClick={p.onClick}>
       {p.children}
     </Link>
   )
@@ -132,17 +120,15 @@ return (
 
 export function Btn(p) {
   let txt = p.txt;
-  if(!txt) {
-    txt = 'h3';
-  }
+  txt ? null : txt = 'h3';
 
   return (
     <div className={`${txt} ${p.className}
     ${clsx({
       [`btn-${p.stl}-disabled`]: p.disabled,
       [`btn-${p.stl}`]: !p.disabled,
-    })}`} 
-    id={p.id} onClick={p.onClick}>
+    })}`}
+      id={p.id} onClick={p.onClick}>
       {p.children}
     </div>
   )
@@ -150,9 +136,7 @@ export function Btn(p) {
 
 export function Cb(p) {
   let ch = p.children;
-  if(!ch) {
-    ch = <HiCheck />;
-  }
+  ch ? null : ch = <HiCheck />;
 
   return (
     <label htmlFor={p.id} className={`${p.className}
@@ -180,9 +164,7 @@ export function Rd(p) {
 
 export function Swtch(p) {
   let tp = p.tp;
-  if(!tp) {
-    tp = 'checkbox';
-  }
+  tp ? null : tp = 'checkbox';
 
   return (
     <label htmlFor={p.id} className={`${p.className}
@@ -193,5 +175,13 @@ export function Swtch(p) {
       <span></span>
       <input type={tp} name={p.name} id={p.id} />
     </label>
+  )
+}
+
+export function Crd(p) {
+  return (
+    <div className={`crd-${p.stl} ${p.className}`} id={p.id}>
+      {p.children}
+    </div>
   )
 }

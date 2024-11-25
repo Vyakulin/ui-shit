@@ -13,11 +13,11 @@
   flex-direction: column;
   gap: 4rem;
 }
-.inpt-fill, .inpt-stroke, .inpt-fill-disabled, .inpt-stroke-disabled, 
-.slct-fill, .slct-stroke, .slct-fill-disabled, .slct-stroke-disabled {
+.inpt-bg, .inpt-ol, .inpt-bg-disabled, .inpt-ol-disabled, 
+.slct-bg, .slct-ol, .slct-bg-disabled, .slct-ol-disabled {
   width: 150px;
 }
-.accr-fill, .accr-stroke, .accr-fill-disabled, .accr-stroke-disabled {
+.accr-bg, .accr-ol, .accr-bg-disabled, .accr-ol-disabled {
   width: 50rem;
 }
 .all {
