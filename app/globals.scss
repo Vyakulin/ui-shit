@@ -941,32 +941,3 @@ body {
     display: none !important;
   }
 }
-
-// Alert
-.alrt {
-  cursor: default;
-  position: fixed;
-  display: flex;
-  flex-wrap: nowrap;
-  max-width: 90rem;
-  bottom: 4rem;
-  left: 4rem;
-  align-items: center;
-  svg {
-    width: 2em;
-  }
-  .alrt-x {
-    width: 2em;
-    align-self: flex-start;
-    cursor: pointer;
-  }
-}
-.alrt-fill {
-  @extend .alrt, .bg;
-  background-color: $white;
-  color: $black;
-}
-.alrt-stroke {
-  @extend .alrt, .ol;
-  color: $white;
-}
