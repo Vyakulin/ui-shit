@@ -201,7 +201,7 @@ export function Alrt(p) {
   let [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div key={p.id+Math.random().toString(10).slice(0, 2)} className={`${p.payload.className} ${
+    <div className={`${p.payload.className} ${
       clsx({
         [`alrt-${p.payload.stl}`]: isOpen,
         [`alrt-disabled`]: !isOpen,
