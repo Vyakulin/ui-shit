@@ -993,3 +993,27 @@ body {
   opacity: 0;
   position: absolute;
 }
+
+// Breadcrumb
+.brdcrmb {
+  ul {
+    display: inline-flex;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+.brdcrmb-bg {
+  @extend .brdcrmb;
+  ul li:nth-last-child(1) {
+    @extend .btn-bg;
+    a {
+      @extend .lnk-grey2;
+    }
+  }
+}
+.brdcrmb-ol {
+  @extend .brdcrmb;
+  ul li:nth-last-child(1) {
+    @extend .btn-ol;
+  }
+}

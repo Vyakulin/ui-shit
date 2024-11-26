@@ -1,9 +1,10 @@
 'use client';
-import { useState, useRef } from "react";
+import { useState, useRef, Fragment } from "react";
 import clsx from "clsx";
 import { HiCheck, HiChevronDown, HiXMark } from "react-icons/hi2";
 import Link from "next/link";
 import { useOnClickOutside } from 'usehooks-ts';
+import { usePathname } from "next/navigation";
 
 export function Inpt(p) {
   let txt = p.txt;
@@ -106,6 +107,9 @@ export function Txt(p) {
 }
 
 export function Lnk(p) {
+  let txt = p.txt;
+  txt ? null : txt = 'h3';
+
   return (
     <Link className={`${p.txt} ${p.className}
     ${clsx({
@@ -209,6 +213,42 @@ export function Alrt(p) {
     }`} {...p.payload}>
       {p.payload.children}
       <HiXMark className={`x-mark h2 lnk-${clr}`} onClick={() => setIsOpen(false)}/>
+    </div>
+  )
+}
+
+export function Brdcrmb(p) {
+  let txt = p.txt;
+  txt ? null : txt = 'h3';
+
+  let pl = usePathname();
+  let pn = pl.split('/').filter((p) => p);
+
+  return (
+    <div className={`${txt} brdcrmb-${p.stl}`} {...p}>
+      <ul>
+        <li>
+          <Lnk href='/' clr='grey' txt={txt}>
+            Home
+          </Lnk>
+        </li>
+        {pn.length > 0 && '/'}
+        {pn.map((link, index) => {
+          let href = `/${pn.slice(0, index + 1).join('/')}`;
+          let itemLink = link[0].toUpperCase() + link.slice(1, link.length);
+
+          return (
+            <Fragment key={Math.random().toString(10).slice(2)}>
+              <li>
+                <Lnk href={href} clr='grey' txt={txt}>
+                  {itemLink}
+                </Lnk>
+              </li>
+              {pn.length !== index + 1 && '/'}
+            </Fragment>
+          )
+        })}
+      </ul>
     </div>
   )
 }

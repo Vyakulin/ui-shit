@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${sfdb.variable} ${sfdsb.variable} ${sfdm.variable} ${sft.variable}`}>
-        {children}
+        <div className="all">{children}</div>
       </body>
     </html>
   );

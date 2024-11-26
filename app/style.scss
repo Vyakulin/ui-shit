@@ -20,6 +20,8 @@
 .accr-bg, .accr-ol, .accr-bg-disabled, .accr-ol-disabled {
   width: 50rem;
 }
-.all {
-  flex-flow: row wrap;
+.test {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rem;
 }

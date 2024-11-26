@@ -1,12 +1,12 @@
 'use client';
 import { AlertManager, AlertsEventHandler } from 'react-alert-system';
-import { Inpt, Slct, Accrdn, Txt, Btn, Cb, Rd, Swtch, Lnk, Crd, Alrt } from './components/atoms';
+import { Inpt, Slct, Accrdn, Txt, Btn, Cb, Rd, Swtch, Lnk, Crd, Alrt, Brdcrmb } from './components/atoms';
 import './style.css';
 import { HiCheck } from "react-icons/hi2";
 
 export default function Home() {
   return (
-    <div className="all">
+    <div className='test'>
       <div className="el-1">
         <Txt txt='h1'>Header1</Txt>
         <Txt txt='h2'>Header2</Txt>
@@ -166,6 +166,12 @@ export default function Home() {
           <Txt txt='h2'>Card header</Txt>
           <Txt txt='p'>ui-Shit</Txt>
         </Crd>
+      </div>
+      <div className="el-1">
+        <Txt txt='h1'>Breadcrumb</Txt>
+        <Lnk clr='white' txt='h3' href='/test/docs'>Example here</Lnk>
+        <Brdcrmb stl='bg'/>
+        <Brdcrmb stl='ol'/>
       </div>
       <div id="alerts"></div>
     </div>
