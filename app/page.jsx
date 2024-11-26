@@ -169,7 +169,7 @@ export default function Home() {
       </div>
       <div className="el-1">
         <Txt txt='h1'>Breadcrumb</Txt>
-        <Lnk clr='white' txt='h3' href='/test/docs'>Example here</Lnk>
+        <Lnk clr='white' txt='h3' href='/docs/breadcrumb/example'>Example here</Lnk>
         <Brdcrmb stl='bg'/>
         <Brdcrmb stl='ol'/>
       </div>

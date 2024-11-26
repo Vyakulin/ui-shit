@@ -989,9 +989,11 @@ body {
   @extend .ol, .alrt;
 }
 .alrt-disabled {
+  @extend .alrt;
   z-index: -1;
   opacity: 0;
   position: absolute;
+  display: flex;
 }
 
 // Breadcrumb
