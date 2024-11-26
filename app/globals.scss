@@ -368,6 +368,7 @@ body {
 .inpt {
   justify-content: space-between;
   cursor: text;
+  width: 50rem;
   input {
     font: inherit;
     color: inherit;
@@ -382,7 +383,7 @@ body {
   &:focus-within {
     span {
       @extend .sm;
-      margin-top: -6rem;
+      margin-top: -14rem;
       margin-left: -4rem;
     }
   }
@@ -390,7 +391,7 @@ body {
 .inpt-valid {
   span {
     @extend .sm;
-    margin-top: -6rem;
+    margin-top: -14rem;
     margin-left: -4rem;
   }
 }
@@ -725,6 +726,7 @@ body {
 .slct {
   display: flex;
   flex-direction: column;
+  width: 50rem;
   .slct-name {
     @extend .bg;
     width: inherit;
@@ -848,6 +850,7 @@ body {
 .accr {
   display: flex;
   flex-direction: column;
+  width: 50rem;
   .accr-name {
     @extend .bg;
     width: inherit;

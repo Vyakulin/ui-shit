@@ -173,7 +173,6 @@ export default function Home() {
         <Brdcrmb stl='bg'/>
         <Brdcrmb stl='ol'/>
       </div>
-      <div id="alerts"></div>
     </div>
   );
 }
