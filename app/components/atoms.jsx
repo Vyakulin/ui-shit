@@ -1,10 +1,9 @@
 'use client';
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import clsx from "clsx";
 import { HiCheck, HiChevronDown, HiXMark } from "react-icons/hi2";
 import Link from "next/link";
 import { useOnClickOutside } from 'usehooks-ts';
-import { AlertManager, AlertsEventHandler } from 'react-alert-system';
 
 export function Inpt(p) {
   let txt = p.txt;
@@ -202,7 +201,7 @@ export function Alrt(p) {
   let [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div key={p.id} className={`${p.payload.className} ${
+    <div key={p.id+Math.random().toString(10).slice(0, 2)} className={`${p.payload.className} ${
       clsx({
         [`alrt-${p.payload.stl}`]: isOpen,
         [`alrt-disabled`]: !isOpen,
