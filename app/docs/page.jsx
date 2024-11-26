@@ -6,6 +6,7 @@ export default function Page() {
     <Fragment>
       <Brdcrmb stl='bg'/>
       <Brdcrmb stl='ol'/>
+      <Brdcrmb stl='txt'/>
     </Fragment>
   )
 }

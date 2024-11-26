@@ -1022,3 +1022,9 @@ body {
     @extend .btn-ol;
   }
 }
+.brdcrmb-txt {
+  @extend .brdcrmb;
+  ul li:nth-last-child(1) a {
+    @extend .lnk-accent;
+  }
+}

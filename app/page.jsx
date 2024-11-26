@@ -172,6 +172,7 @@ export default function Home() {
         <Lnk clr='white' txt='h3' href='/docs/breadcrumb/example'>Example here</Lnk>
         <Brdcrmb stl='bg'/>
         <Brdcrmb stl='ol'/>
+        <Brdcrmb stl='txt'/>
       </div>
     </div>
   );
