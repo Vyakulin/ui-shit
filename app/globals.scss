@@ -962,6 +962,14 @@ body {
 }
 
 // Alerts
+#alerts {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: fixed;
+  bottom: 4rem;
+  left: 4rem;
+}
 .alrt {
   padding: 3rem 6rem;
   cursor: default;
@@ -983,7 +991,5 @@ body {
 .alrt-disabled {
   z-index: -1;
   opacity: 0;
-  width: 0;
-  height: 0;
-  padding: 0;
+  position: absolute;
 }
