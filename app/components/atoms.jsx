@@ -1,9 +1,10 @@
 'use client';
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import clsx from "clsx";
-import { HiCheck, HiChevronDown } from "react-icons/hi2";
+import { HiCheck, HiChevronDown, HiXMark } from "react-icons/hi2";
 import Link from "next/link";
 import { useOnClickOutside } from 'usehooks-ts';
+import { AlertManager, AlertsEventHandler } from 'react-alert-system';
 
 export function Inpt(p) {
   let txt = p.txt;
@@ -22,7 +23,7 @@ export function Inpt(p) {
       [`inpt-${p.stl}-disabled`]: p.disabled,
       [`inpt-${p.stl}`]: !p.disabled,
     })}`}
-      id={p.id}>
+    {...p}>
       <span>{p.children}</span>
       {p.icon}
       <input className={txt} name={p.name} type={tp} onChange={change} />
@@ -57,7 +58,7 @@ export function Slct(p) {
       [`slct-${p.stl}`]: !p.disabled,
       [`slct-open`]: isOpen,
     })}`}
-      id={p.id} ref={ref}>
+      ref={ref} {...p}>
       <div className={`slct-name ${txt}`} onClick={changeOpen}>
         <span>{name}</span>
         <HiChevronDown />
@@ -87,7 +88,7 @@ export function Accrdn(p) {
       [`accr-${p.stl}`]: !p.disabled,
       [`accr-open`]: isOpen,
     })}`}
-      id={p.id}>
+    {...p}>
       <div className={`accr-name ${txt}`} onClick={changeOpen}>
         <span>{p.name}</span>
         <HiChevronDown />
@@ -99,7 +100,7 @@ export function Accrdn(p) {
 
 export function Txt(p) {
   return (
-    <div className={`${p.txt} ${p.className}`} id={p.id}>
+    <div className={`${p.txt} ${p.className}`} {...p}>
       {p.children}
     </div>
   )
@@ -112,7 +113,7 @@ export function Lnk(p) {
       [`lnk-disabled`]: p.disabled,
       [`lnk-${p.clr}`]: !p.disabled,
     })}`}
-      id={p.id} href={p.href} target={p.target} onClick={p.onClick}>
+    {...p}>
       {p.children}
     </Link>
   )
@@ -128,7 +129,7 @@ export function Btn(p) {
       [`btn-${p.stl}-disabled`]: p.disabled,
       [`btn-${p.stl}`]: !p.disabled,
     })}`}
-      id={p.id} onClick={p.onClick}>
+    {...p}>
       {p.children}
     </div>
   )
@@ -145,7 +146,7 @@ export function Cb(p) {
       [`cb-${p.stl}`]: !p.disabled,
     })}`} >
       {ch}
-      <input type="checkbox" name={p.name} id={p.id} />
+      <input type="checkbox" id={p.id} {...p} />
     </label>
   )
 }
@@ -157,7 +158,7 @@ export function Rd(p) {
       [`rd-${p.stl}-disabled`]: p.disabled,
       [`rd-${p.stl}`]: !p.disabled,
     })}`} >
-      <input type="radio" name={p.name} id={p.id} />
+      <input type="radio" id={p.id} {...p}/>
     </label>
   )
 }
@@ -173,15 +174,42 @@ export function Swtch(p) {
       [`swtch-${p.stl}`]: !p.disabled,
     })}`} >
       <span></span>
-      <input type={tp} name={p.name} id={p.id} />
+      <input type={tp} {...p} />
     </label>
   )
 }
 
 export function Crd(p) {
   return (
-    <div className={`crd-${p.stl} ${p.className}`} id={p.id}>
+    <div className={`crd-${p.stl} ${p.className}`} {...p}>
       {p.children}
+    </div>
+  )
+}
+
+export function Alrt(p) {
+  let clr;
+  switch (p.payload.stl) {
+    case 'bg':
+      clr = 'grey2';
+      break;
+
+    case 'ol':
+      clr = 'grey';
+      break;
+  }
+
+  let [isOpen, setIsOpen] = useState(true);
+
+  return (
+    <div key={p.id} className={`${p.payload.className} ${
+      clsx({
+        [`alrt-${p.payload.stl}`]: isOpen,
+        [`alrt-disabled`]: !isOpen,
+      })
+    }`} {...p.payload}>
+      {p.payload.children}
+      <HiXMark className={`x-mark h2 lnk-${clr}`} onClick={() => setIsOpen(false)}/>
     </div>
   )
 }

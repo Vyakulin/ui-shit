@@ -291,6 +291,9 @@ body {
 .txt {
   line-height: 1;
   font-style: normal;
+  align-items: center;
+  display: inline-flex;
+  gap: 2rem;
 }
 .h1 {
   @extend .txt;
@@ -674,6 +677,7 @@ body {
 .lnk {
   display: inline-flex;
   gap: 2rem;
+  cursor: pointer;
 }
 .lnk-white {
   @extend .lnk;
@@ -955,4 +959,28 @@ body {
 }
 .crd-ol {
   @extend .ol, .crd;
+}
+
+// Alerts
+.alrt {
+  padding: 3rem 6rem;
+  cursor: default;
+  flex-wrap: nowrap;
+  max-width: 100rem;
+  align-items: center;
+  .x-mark {
+    align-self: flex-start;
+  }
+}
+.alrt-bg {
+  @extend .bg, .alrt;
+  background-color: $white;
+  color: $black;
+}
+.alrt-ol {
+  @extend .ol, .alrt;
+}
+.alrt-disabled {
+  z-index: -1;
+  opacity: 0;
 }

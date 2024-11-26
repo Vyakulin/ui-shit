@@ -1,4 +1,6 @@
-import { Inpt, Slct, Accrdn, Txt, Btn, Cb, Rd, Swtch, Lnk, Crd } from './components/atoms';
+'use client';
+import { AlertManager, AlertsEventHandler } from 'react-alert-system';
+import { Inpt, Slct, Accrdn, Txt, Btn, Cb, Rd, Swtch, Lnk, Crd, Alrt } from './components/atoms';
 import './style.css';
 import { HiCheck } from "react-icons/hi2";
 
@@ -120,16 +122,52 @@ export default function Home() {
         </Accrdn>
       </div>
       <div className="el-1">
+        <Txt txt='h1'>Alert</Txt>
+        <AlertManager
+          portalId="alerts"
+          AlertComponent={Alrt}
+        />
+        <Btn stl='bg' 
+        onClick={() => {
+          AlertsEventHandler.add({
+            id: "alrt-0",
+            preventDuplicated: false,
+            duration: 10000,
+            payload: {
+              children: [<Txt txt='h3'><HiCheck/>Test alert message</Txt>],
+              stl: 'bg',
+            }
+          })
+        }}>
+          Click to show alert
+        </Btn>
+        <Btn stl='ol' 
+        onClick={() => {
+          AlertsEventHandler.add({
+            id: "alrt-0",
+            preventDuplicated: false,
+            duration: 10000,
+            payload: {
+              children: [<Txt txt='h3'><HiCheck/>Test alert message</Txt>],
+              stl: 'ol',
+            }
+          })
+        }}>
+          Click to show alert
+        </Btn>
+      </div>
+      <div className="el-1">
         <Txt txt='h1'>Card</Txt>
         <Crd stl='bg'>
           <Txt txt='h2'>Card header</Txt>
-          <Txt txt='p'>Card text</Txt>
+          <Txt txt='p'>ui-Shit</Txt>
         </Crd>
         <Crd stl='ol'>
           <Txt txt='h2'>Card header</Txt>
-          <Txt txt='p'>Card text</Txt>
+          <Txt txt='p'>ui-Shit</Txt>
         </Crd>
       </div>
+      <div id="alerts"></div>
     </div>
   );
 }
