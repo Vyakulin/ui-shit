@@ -480,6 +480,9 @@ body {
 // Buttons
 .bt {
   cursor: pointer;
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 // Links
