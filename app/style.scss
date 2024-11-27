@@ -1,25 +1,3 @@
-.el-1 {
-  display: flex;
-  flex-direction: column;
-  gap: 6rem;
-}
-.el-2 {
-  display: flex;
-  flex-direction: row;
-  gap: 6rem;
-}
-.el-3 {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-.inpt-bg, .inpt-ol, .inpt-bg-disabled, .inpt-ol-disabled, 
-.slct-bg, .slct-ol, .slct-bg-disabled, .slct-ol-disabled {
-  width: 150px;
-}
-.accr-bg, .accr-ol, .accr-bg-disabled, .accr-ol-disabled {
-  width: 50rem;
-}
 .test {
   display: flex;
   flex-wrap: wrap;
