@@ -642,9 +642,16 @@ body {
     margin-left: 0.5rem;
     opacity: 0;
   }
-  &:has(input:checked), &:hover {
+  &:has(input:checked) {
     svg {
       opacity: 1;
+    }
+  }
+  @media (pointer: fine) {
+    &:hover {
+      svg {
+        opacity: 1;
+      }
     }
   }
 }
