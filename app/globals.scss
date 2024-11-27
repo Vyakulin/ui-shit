@@ -1239,24 +1239,31 @@ body {
 }
 .al-ol-w {
   @extend .al, .ol-w;
+  background-color: $b;
 }
 .al-ol-w2 {
   @extend .al, .ol-w2;
+  background-color: $b2;
 }
 .al-ol-w3 {
   @extend .al, .ol-w3;
+  background-color: $b;
 }
 .al-ol-b {
   @extend .al, .ol-b;
+  background-color: $w;
 }
 .al-ol-b2 {
   @extend .al, .ol-b2;
+  background-color: $w2;
 }
 .al-ol-b3 {
   @extend .al, .ol-b3;
+  background-color: $w;
 }
 .al-ol-a {
   @extend .al, .ol-a;
+  background-color: $w;
 }
 
 // Cards 
@@ -1318,6 +1325,7 @@ body {
   color: $a;
 }
 
+// Breadcrumb
 .brcr {
   ul {
     display: inline-flex;
