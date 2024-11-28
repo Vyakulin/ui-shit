@@ -255,7 +255,7 @@ $a: var(--pink-500);
 $a2: var(--pink-300);
 
 $rd: 3rem;
-$olw: 1.5px;
+$olw: 2px;
 
 // Defaults
 * {
@@ -278,11 +278,6 @@ body {
   color: $w;
   display: flex;
   flex-direction: column;
-}
-.all {
-  display: flex;
-  flex-direction: column;
-  gap: 12rem;
 }
 
 // Text
@@ -1346,22 +1341,48 @@ body {
 }
 
 // Other
-.el-1 {
+header {
+  @extend .ol;
+  position: fixed;
+  align-self: center;
+  z-index: 10;
+  top: 4rem;
+  background-color: $w;
+  padding: 3rem 6rem;
+  width: inherit;
+  justify-content: space-between;
+  outline-color: $w2;
+  .hd-links {
+    display: flex;
+    gap: 4rem;
+  }
+}
+
+.all {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 12rem;
+  align-self: center;
+  padding-top: 30rem;
 }
-.el-2 {
-  display: flex;
-  flex-direction: row;
-  gap: 6rem;
+
+@media screen and (min-width: 1440px) {
+  $width: 1440px;
+  .all {
+    width: $width;
+  }
 }
-.el-3 {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  $width: 924px;
+  .all {
+    width: $width;
+  }
 }
-.el-3-2 {
-  display: flex;
-  gap: 6rem;
+
+@media screen and (min-width: 350px) and (max-width: 1023px) {
+  $width: 95%;
+  .all {
+    width: $width;
+  }
 }

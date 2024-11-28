@@ -31,7 +31,7 @@ export function Txt(p) {
   )
 }
 
-export function Lnk(p) {
+export function Ln(p) {
   let [txt, style, color] = defaults(p);
 
   return (
@@ -44,7 +44,7 @@ export function Lnk(p) {
   )
 }
 
-export function Btn(p) {
+export function Bt(p) {
   let [txt, style, color] = defaults(p);
 
   return (
@@ -57,7 +57,7 @@ export function Btn(p) {
   )
 }
 
-export function Inpt(p) {
+export function In(p) {
   let [txt, style, color] = defaults(p);
 
   let [isValid, setIsValid] = useState(false);
@@ -108,7 +108,7 @@ export function Rd(p) {
   )
 }
 
-export function Swtch(p) {
+export function Sw(p) {
   let [txt, style, color] = defaults(p);
 
   let tp = p.tp;
@@ -125,7 +125,7 @@ export function Swtch(p) {
   )
 }
 
-export function Slct(p) {
+export function Sl(p) {
   let [txt, style, color] = defaults(p);
 
   let [isOpen, setIsOpen] = useState(false);
@@ -163,7 +163,7 @@ export function Slct(p) {
   )
 }
 
-export function Accrdn(p) {
+export function Ac(p) {
   let [txt, style, color] = defaults(p);
 
   let [isOpen, setIsOpen] = useState(false);
@@ -186,7 +186,7 @@ export function Accrdn(p) {
   )
 }
 
-export function Alrt(p) {
+export function Al(p) {
   let style = p.payload.bg;
     style ? null : style = 'bg';
   
@@ -206,7 +206,7 @@ export function Alrt(p) {
     )
 }
 
-export function Crd(p) {
+export function Cr(p) {
   let [txt, style, color] = defaults(p);
 
   return (
@@ -218,7 +218,7 @@ export function Crd(p) {
   )
 }
 
-export function Brdcrmb(p) {
+export function Brcr(p) {
   let [txt, style, color] = defaults(p);
 
   let pl = usePathname();
@@ -230,9 +230,9 @@ export function Brdcrmb(p) {
     })} {...p}>
       <ul>
         <li>
-          <Lnk href='/' color={color}>
+          <Ln href='/' color={color}>
             Home
-          </Lnk>
+          </Ln>
         </li>
         {pn.length > 0 && '/'}
         {pn.map((link, index) => {
@@ -242,17 +242,17 @@ export function Brdcrmb(p) {
           return (
             <Fragment key={Math.random().toString(10).slice(2)}>
               <li>
-                {pn.length !== index + 1 ? <Lnk href={href} color={color}>
+                {pn.length !== index + 1 ? <Ln href={href} color={color}>
                   {itemLink}
-                </Lnk> :
-                ((style === 'bg' || style === 'ol') && <Lnk href={href} className={clsx({
+                </Ln> :
+                ((style === 'bg' || style === 'ol') && <Ln href={href} className={clsx({
                   [`bt ${style}-${color} ${txt}`]: true,
                 })}>
                   {itemLink}
-                </Lnk>) || 
-                (style === 'txt' && <Lnk href={href} color='a'>
+                </Ln>) || 
+                (style === 'txt' && <Ln href={href} color='a'>
                   {itemLink}
-                </Lnk>)}
+                </Ln>)}
               </li>
               {pn.length !== index + 1 && '/'}
             </Fragment>

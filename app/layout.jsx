@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import { Header } from "./components/blocks";
 
 const sft = localFont({
   src: './fonts/SF-Pro-Text-Regular.otf',
@@ -26,7 +27,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${sfdb.variable} ${sfdsb.variable} ${sfdm.variable} ${sft.variable}`}>
-        <div className="all">{children}</div>
+        <div className="all">
+          <Header />
+          {children}
+        </div>
         <div id="alerts"></div>
       </body>
     </html>

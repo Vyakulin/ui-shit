@@ -1,34 +1,34 @@
-import { Brdcrmb, Crd } from "@/app/components/atoms"
+import { Brcr, Cr } from "@/app/components/atoms"
 import { Fragment } from "react"
 
 export default function Page() {
   return (
     <Fragment>
       <div className='el-3-2'>
-          <Crd color='b'>
-            <Brdcrmb bg='bg' color='w'/>
-            <Brdcrmb bg='bg' color='w2'/>
-            <Brdcrmb bg='bg' color='w3'/>
-            <Brdcrmb bg='bg' color='a'/>
-            <Brdcrmb bg='ol' color='w'/>
-            <Brdcrmb bg='ol' color='w2'/>
-            <Brdcrmb bg='ol' color='w3'/>
-            <Brdcrmb bg='ol' color='a'/>
-            <Brdcrmb bg='txt' color='w'/>
-            <Brdcrmb bg='txt' color='w2'/>
-          </Crd>
-          <Crd color='w'>
-            <Brdcrmb bg='bg' color='b'/>
-            <Brdcrmb bg='bg' color='b2'/>
-            <Brdcrmb bg='bg' color='b3'/>
-            <Brdcrmb bg='bg' color='a'/>
-            <Brdcrmb bg='ol' color='b'/>
-            <Brdcrmb bg='ol' color='b2'/>
-            <Brdcrmb bg='ol' color='b3'/>
-            <Brdcrmb bg='ol' color='a'/>
-            <Brdcrmb bg='txt' color='b'/>
-            <Brdcrmb bg='txt' color='b2'/>
-          </Crd>
+          <Cr color='b'>
+            <Brcr bg='bg' color='w'/>
+            <Brcr bg='bg' color='w2'/>
+            <Brcr bg='bg' color='w3'/>
+            <Brcr bg='bg' color='a'/>
+            <Brcr bg='ol' color='w'/>
+            <Brcr bg='ol' color='w2'/>
+            <Brcr bg='ol' color='w3'/>
+            <Brcr bg='ol' color='a'/>
+            <Brcr bg='txt' color='w'/>
+            <Brcr bg='txt' color='w2'/>
+          </Cr>
+          <Cr color='w'>
+            <Brcr bg='bg' color='b'/>
+            <Brcr bg='bg' color='b2'/>
+            <Brcr bg='bg' color='b3'/>
+            <Brcr bg='bg' color='a'/>
+            <Brcr bg='ol' color='b'/>
+            <Brcr bg='ol' color='b2'/>
+            <Brcr bg='ol' color='b3'/>
+            <Brcr bg='ol' color='a'/>
+            <Brcr bg='txt' color='b'/>
+            <Brcr bg='txt' color='b2'/>
+          </Cr>
         </div>
     </Fragment>
   )
