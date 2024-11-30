@@ -1,1 +1,1 @@
-.test{display:flex;flex-wrap:wrap;gap:12rem}.el-1{display:flex;flex-direction:column;gap:8rem}.el-3{display:flex;flex-direction:column;gap:4rem}.el-3-2{display:flex;gap:6rem}
+.test{display:flex;gap:12rem}.el-1{display:flex;flex-direction:column;gap:8rem}.el-3{display:flex;flex-direction:column;gap:4rem}.el-3-2{display:flex;gap:6rem}@media screen and (min-width: 360px)and (max-width: 1023px){.test{justify-content:center}.test div{justify-content:center}}

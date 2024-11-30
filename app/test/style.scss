@@ -1,6 +1,5 @@
 .test {
   display: flex;
-  flex-wrap: wrap;
   gap: 12rem;
 }
 .el-1 {
@@ -16,4 +15,12 @@
 .el-3-2 {
   display: flex;
   gap: 6rem;
+}
+@media screen and (min-width: 360px) and (max-width: 1023px) {
+  .test {
+    justify-content: center;
+    div {
+      justify-content: center;
+    }
+  }
 }
