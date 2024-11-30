@@ -1364,6 +1364,7 @@ header {
 }
 // Burger
 .burger {
+  display: none;
   .burger-bt {
     width: 6rem;
     height: 6rem;
@@ -1419,11 +1420,13 @@ header {
 // Footer
 footer {
   @extend .ol;
+  align-self: center;
   background-color: $w;
   justify-content: center;
   gap: 6rem;
   padding: 8rem 0;
   outline-color: $w2;
+  margin-bottom: 4rem;
   .ft-links {
     display: flex;
     flex-direction: column;
