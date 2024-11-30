@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { Header } from "./components/blocks";
+import { Header, Footer } from "./components/blocks";
+import "./adaptive.css"
 
 const sft = localFont({
   src: './fonts/SF-Pro-Text-Regular.otf',
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
         </div>
+        <Footer />
         <div id="alerts"></div>
       </body>
     </html>

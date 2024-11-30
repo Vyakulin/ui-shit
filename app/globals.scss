@@ -1341,6 +1341,8 @@ body {
 }
 
 // Other
+
+// Header
 header {
   @extend .ol;
   position: fixed;
@@ -1355,6 +1357,89 @@ header {
   .hd-links {
     display: flex;
     gap: 4rem;
+    *:nth-last-child(1) {
+      display: none;
+    }
+  }
+}
+// Burger
+.burger {
+  .burger-bt {
+    width: 6rem;
+    height: 6rem;
+    display: inline-flex;
+    cursor: pointer;
+    div {
+      width: 6rem;
+      height: 1rem;
+      background-color: currentColor;
+      border-radius: 0.5rem;
+    }
+  }
+  .burger-bt-open {
+    #burger-bt-1 {
+      transform:
+        translateY(2rem) 
+        rotate(45deg);
+    }
+    #burger-bt-2 {
+      transform: scale(0);
+    }
+    #burger-bt-3 {
+      transform:
+        translateY(-2rem) 
+        rotate(-45deg);
+    }
+  }
+  .burger-links {
+    @extend .ol;
+    opacity: 0;
+    transform: translateY(-16rem);
+    pointer-events: none;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: $w;
+    padding: 2rem;
+    outline-color: $w2;
+    border-radius: 0 0 0 3rem;
+    position: fixed;
+    right: 0;
+    top: calc(16rem - 2px);
+    *:nth-last-child(1) {
+      display: none;
+    }
+  }
+  .burger-links-open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  @extend .ol;
+  background-color: $w;
+  justify-content: center;
+  gap: 6rem;
+  padding: 8rem 0;
+  outline-color: $w2;
+  .ft-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3rem;
+  }
+  .ft-contacts {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-auto-flow: row;
+    gap: 3rem;
+    a:nth-child(3) {
+      height: calc(200% + 3rem);
+    }
+  }
+  div:nth-child(1), div:nth-last-child(1) {
+    width: 42rem;
   }
 }
 
@@ -1364,25 +1449,5 @@ header {
   gap: 12rem;
   align-self: center;
   padding-top: 30rem;
-}
-
-@media screen and (min-width: 1440px) {
-  $width: 1440px;
-  .all {
-    width: $width;
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
-  $width: 924px;
-  .all {
-    width: $width;
-  }
-}
-
-@media screen and (min-width: 350px) and (max-width: 1023px) {
-  $width: 95%;
-  .all {
-    width: $width;
-  }
+  padding-bottom: 10rem;
 }

@@ -1,0 +1,49 @@
+@media screen and (min-width: 1440px) {
+  $width: 1440px;
+  .all {
+    width: $width;
+  }
+  .burger {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  $width: 924px;
+  .all {
+    width: $width;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 1023px) {
+  $width: 95%;
+  .all {
+    width: $width;
+  }
+  header {
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+  }
+  .burger {
+    display: block;
+  }
+  .hd-links {
+    display: none !important;
+  }
+  footer {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+    align-content: center;
+    .ft-links {
+      align-items: center;
+    }
+    .ft-contacts {
+      grid-auto-flow: column;
+      a:nth-child(3) {
+        height: 100%;
+      }
+    }
+  }
+}
