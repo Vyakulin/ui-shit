@@ -1416,6 +1416,7 @@ header {
   }
 }
 
+// Footer
 footer {
   @extend .ol;
   background-color: $w;
@@ -1443,6 +1444,7 @@ footer {
   }
 }
 
+// All
 .all {
   display: flex;
   flex-direction: column;
@@ -1450,4 +1452,15 @@ footer {
   align-self: center;
   padding-top: 30rem;
   padding-bottom: 10rem;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $w;
+  *:hover {
+    background-color: $w2;
+  }
 }
