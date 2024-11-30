@@ -1439,9 +1439,6 @@ footer {
       height: calc(200% + 3rem);
     }
   }
-  div:nth-child(1), div:nth-last-child(1) {
-    width: 42rem;
-  }
 }
 
 // All
@@ -1455,12 +1452,7 @@ footer {
 }
 
 // Scrollbar
-::-webkit-scrollbar-track {
-  width: 0;
-}
-::-webkit-scrollbar-thumb {
-  background-color: $w;
-  *:hover {
-    background-color: $w2;
-  }
+* {
+  scrollbar-color: $w transparent;
+  scrollbar-width: thin;
 }
