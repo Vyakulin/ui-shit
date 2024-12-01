@@ -19,7 +19,7 @@
 @media screen and (min-width: 360px) and (max-width: 1023px) {
   .test {
     justify-content: center;
-    div {
+    & > div, & > div > div {
       justify-content: center;
     }
   }
