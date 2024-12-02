@@ -407,6 +407,17 @@ body {
     }
   }
 }
+.bg-a2 {
+  @extend .bg;
+  background-color: $a2;
+  color: $b;
+  @media (pointer: fine) {
+    &:hover {
+      background-color: $a;
+      color: $w;
+    }
+  }
+}
 
 .ol-w {
   @extend .ol;
@@ -468,6 +479,15 @@ body {
   @media (pointer: fine) {
     &:hover {
       color: $a2;
+    }
+  }
+}
+.ol-a2 {
+  @extend .ol;
+  color: $a2;
+  @media (pointer: fine) {
+    &:hover {
+      color: $a;
     }
   }
 }
@@ -1448,10 +1468,13 @@ footer {
 .all {
   display: flex;
   flex-direction: column;
-  gap: 12rem;
+  gap: 20rem;
   align-self: center;
   padding-top: 30rem;
   padding-bottom: 10rem;
+  & > div {
+    width: 100%;
+  }
 }
 
 // Scrollbar

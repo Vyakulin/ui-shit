@@ -24,7 +24,7 @@ export function Txt(p) {
 
   return (
     <div className={clsx({
-      [`${txt}`]: true,
+      [`${txt} ${p.className}`]: true,
     })} {...p}>
       {p.children}
     </div>
@@ -36,7 +36,7 @@ export function Ln(p) {
 
   return (
     <Link className={clsx({
-      [`l-${color} ${txt}`]: true,
+      [`l-${color} ${txt} ${p.className}`]: true,
     })}
     {...p}>
       {p.children}
@@ -49,7 +49,7 @@ export function Bt(p) {
 
   return (
     <div className={clsx({
-      [`bt ${style}-${color} ${txt}`]: true,
+      [`bt ${style}-${color} ${txt} ${p.className}`]: true,
     })}
     {...p}>
       {p.children}
@@ -67,7 +67,7 @@ export function In(p) {
 
   return (
     <div className={clsx({
-      [`in-${style}-${color} ${txt}`]: true,
+      [`in-${style}-${color} ${txt} ${p.className}`]: true,
       [`in-valid`]: isValid,
     })}
     {...p}>
@@ -86,7 +86,7 @@ export function Cb(p) {
 
   return (
     <label className={clsx({
-      [`cb-${style}-${color}`]: true,
+      [`cb-${style}-${color} ${p.className}`]: true,
     })} 
     {...p}>
       {ch}
@@ -100,7 +100,7 @@ export function Rd(p) {
 
   return (
     <label className={clsx({
-      [`rd-${style}-${color}`]: true,
+      [`rd-${style}-${color} ${p.className}`]: true,
     })} 
     {...p}>
       <input type="radio" name={p.name} value={p.value}/>
@@ -116,7 +116,7 @@ export function Sw(p) {
 
   return (
     <label className={clsx({
-      [`sw-${style}-${color}`]: true,
+      [`sw-${style}-${color} ${p.className}`]: true,
     })} 
     {...p}>
       <span></span>
@@ -146,7 +146,7 @@ export function Sl(p) {
 
   return (
     <div className={clsx({
-      [`sl-${style}-${color}`]: true,
+      [`sl-${style}-${color} ${p.className}`]: true,
       [`sl-open`]: isOpen
     })}
       ref={ref} {...p}>
@@ -173,7 +173,7 @@ export function Ac(p) {
 
   return (
     <div className={clsx({
-      [`ac-${style}-${color}`]: true,
+      [`ac-${style}-${color} ${p.className}`]: true,
       [`ac-open`]: isOpen
     })}
     {...p}>
@@ -197,7 +197,7 @@ export function Al(p) {
   
     return (
       <div className={clsx({
-        [`al-${style}-${color}`]: isOpen,
+        [`al-${style}-${color} ${p.className}`]: isOpen,
         [`al-close`]: !isOpen,
       })} 
       onClick={() => setIsOpen(false)} {...p.payload}>
@@ -211,7 +211,7 @@ export function Cr(p) {
 
   return (
     <div className={clsx({
-      [`cr-${style}-${color}`]: true,
+      [`cr-${style}-${color} ${p.className}`]: true,
     })} {...p}>
       {p.children}
     </div>
@@ -226,7 +226,7 @@ export function Brcr(p) {
 
   return (
     <div className={clsx({
-      [`brcr ${txt}`]: true,
+      [`brcr ${txt} ${p.className}`]: true,
     })} {...p}>
       <ul>
         <li>
